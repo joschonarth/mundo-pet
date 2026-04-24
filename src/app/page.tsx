@@ -6,7 +6,7 @@ export default function Home() {
 
   return (
     <div className="bg-background-primary p-6">
-      <div className="flex items-center justify-between md:m-8">
+      <div className="mb-8 flex items-center justify-between">
         <div>
           <h1 className="mb-2 text-content-primary text-title-size">
             Sua Agenda
