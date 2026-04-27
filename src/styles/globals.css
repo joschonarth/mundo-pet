@@ -235,6 +235,15 @@
   .bg-accent-orange-light {
     background-color: var(--color-accent-orange-light);
   }
+
+  .scrollbar-hidden {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* Toast Error Styles */
