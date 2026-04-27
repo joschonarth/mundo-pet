@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import { IMaskInput } from 'react-imask'
+import { toast } from 'sonner'
 import z from 'zod'
 import { Button } from '@/components/ui/button'
 import { Calendar } from '@/components/ui/calendar'
@@ -91,7 +92,12 @@ export const AppointmentForm = () => {
   })
 
   const onSubmit = (data: AppointFormValues) => {
-    console.log(data)
+    const [hour, minute] = data.time.split(':')
+
+    const scheduleAt = new Date(data.scheduleAt)
+    scheduleAt.setHours(Number(hour), Number(minute), 0, 0)
+
+    toast.success('Agendamento criado com sucesso!')
   }
 
   return (
