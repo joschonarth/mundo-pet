@@ -1,8 +1,9 @@
 'use client'
 
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Dog, User } from 'lucide-react'
+import { Dog, Phone, User } from 'lucide-react'
 import { useForm } from 'react-hook-form'
+import { IMaskInput } from 'react-imask'
 import z from 'zod'
 import { Button } from '@/components/ui/button'
 import {
@@ -111,6 +112,33 @@ export const AppointmentForm = () => {
                       <Input
                         className="pl-10"
                         placeholder="Nome do pet"
+                        {...field}
+                      />
+                    </div>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="phone"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-content-primary text-label-medium-size">
+                    Telefone
+                  </FormLabel>
+                  <FormControl>
+                    <div className="relative">
+                      <Phone
+                        className="absolute top-1/2 left-3 -translate-y-1/2 transform text-content-brand"
+                        size={20}
+                      />
+                      <IMaskInput
+                        className="flex h-12 w-full rounded-md border border-border-primary bg-background-tertiary px-3 py-2 pl-10 text-content-primary text-sm ring-offset-background file:border-0 file:bg-transparent file:font-medium file:text-sm placeholder:text-content-secondary hover:border-border-secondary focus:border-border-brand focus-visible:border-border-brand focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-border-brand focus-visible:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20"
+                        mask="(00) 00000-0000"
+                        placeholder="(99) 99999-9999"
                         {...field}
                       />
                     </div>
