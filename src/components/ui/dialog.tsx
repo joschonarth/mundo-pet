@@ -166,7 +166,7 @@ const dialogTitleVariants = cva('font-semibold leading-none', {
       default: 'text-lg',
       lg: 'text-xl',
       xl: 'text-2xl',
-      modal: '!text-content-primary !text-title-modal',
+      modal: '!text-content-primary !text-title-modal !text-lg',
     },
   },
   defaultVariants: {
