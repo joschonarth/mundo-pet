@@ -16,7 +16,7 @@ import { useForm } from 'react-hook-form'
 import { IMaskInput } from 'react-imask'
 import { toast } from 'sonner'
 import z from 'zod'
-import { createAppointment } from '@/app/actions'
+import { createAppointment, updateAppointment } from '@/app/actions'
 import { Button } from '@/components/ui/button'
 import { Calendar } from '@/components/ui/calendar'
 import {
@@ -110,17 +110,26 @@ export const AppointmentForm = ({
     const scheduleAt = new Date(data.scheduleAt)
     scheduleAt.setHours(Number(hour), Number(minute), 0, 0)
 
-    const result = await createAppointment({
-      ...data,
-      scheduleAt,
-    })
+    const isEdit = !!appointment?.id
+
+    const result = isEdit
+      ? await updateAppointment(appointment.id, {
+          ...data,
+          scheduleAt,
+        })
+      : await createAppointment({
+          ...data,
+          scheduleAt,
+        })
 
     if (result?.error) {
       toast.error(result.error)
       return
     }
 
-    toast.success('Agendamento criado com sucesso!')
+    toast.success(
+      `Agendamento ${isEdit ? 'atualizado' : 'criado'} com sucesso!`
+    )
 
     setIsOpen(false)
     form.reset()
