@@ -13,6 +13,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { Button } from '../ui/button'
 import { Calendar } from '../ui/calendar'
 import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover'
+import { NavigationButton } from './navigation-button'
 
 export const DatePicker = () => {
   const router = useRouter()
@@ -68,9 +69,12 @@ export const DatePicker = () => {
 
   return (
     <div className="flex items-center gap-2">
-      <Button onClick={() => handleNavigateDay(-1)} variant="outline">
+      <NavigationButton
+        onClick={() => handleNavigateDay(-1)}
+        tooltipText="Dia anterior"
+      >
         <ChevronLeft className="h-4 w-4" />
-      </Button>
+      </NavigationButton>
 
       <Popover onOpenChange={setIsPopoverOpen} open={isPopoverOpen}>
         <PopoverTrigger asChild>
@@ -102,9 +106,12 @@ export const DatePicker = () => {
         </PopoverContent>
       </Popover>
 
-      <Button onClick={() => handleNavigateDay(1)} variant="outline">
+      <NavigationButton
+        onClick={() => handleNavigateDay(1)}
+        tooltipText="Próximo dia"
+      >
         <ChevronRight className="h-4 w-4" />
-      </Button>
+      </NavigationButton>
     </div>
   )
 }
