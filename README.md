@@ -9,7 +9,7 @@
 <img src="https://img.shields.io/github/last-commit/joschonarth/mundo-pet?style=default&logo=git&logoColor=white&color=9282fa&labelColor=27272a" alt="last-commit">
 <img src="https://img.shields.io/github/languages/top/joschonarth/mundo-pet?style=default&color=9282fa&labelColor=27272a" alt="repo-top-language">
 <img src="https://img.shields.io/github/languages/count/joschonarth/mundo-pet?style=default&color=9282fa&labelColor=27272a" alt="repo-language-count">
-<a href="https://mundo-pet.vercel.app/" target="_blank">
+<a href="https://mundo-pet-lemon.vercel.app/" target="_blank">
   <img src="https://img.shields.io/badge/vercel-deployed-brightgreen?style=default&logo=vercel&logoColor=white&color=9282fa&labelColor=27272a" alt="vercel">
 </a>
 
@@ -24,8 +24,8 @@
 
 ---
 
-<a href="https://mundo-pet.vercel.app" target="_blank">
-  <img width="1348" height="677" alt="mundo-pet" src="" />
+<a href="https://mundo-pet-lemon.vercel.app/" target="_blank">
+  <img width="1366" height="688" alt="mundo-pet" src="https://github.com/user-attachments/assets/c84e0b37-72d2-47fd-aa5d-aedfee0ceb4b" />
 </a>
 
 ---
