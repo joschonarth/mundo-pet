@@ -45,6 +45,7 @@ O **Mundo Pet** é um sistema web de agendamento para Pet Shop, desenvolvido com
 - 🧩 **[shadcn/ui](https://ui.shadcn.com/)** — Componentes acessíveis e estilizáveis com Radix UI.
 - 🗃️ **[Prisma](https://www.prisma.io/)** — ORM moderno para acesso e manipulação do banco de dados.
 - 🐘 **[PostgreSQL](https://www.postgresql.org/)** — Banco de dados relacional robusto e confiável.
+- 🐳 **[Docker](https://www.docker.com/)** — Containerização do banco de dados PostgreSQL.
 - 📋 **[React Hook Form](https://react-hook-form.com/)** — Gerenciamento de formulários performático.
 - 🛡️ **[Zod](https://zod.dev/)** — Validação e parsing de schemas com inferência de tipos.
 - 📅 **[React Day Picker](https://react-day-picker.js.org/)** — Componente de calendário robusto e customizável.
